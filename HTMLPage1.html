@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Masiso con UMH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e74c3c; /* fondo rojo */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+            .imagenes img {
+                width: 250px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+                transition: transform 0.3s;
+            }
+
+                .imagenes img:hover {
+                    transform: scale(1.1);
+                }
+        /* Marca de agua */
+        .marca-agua {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página Masiso de Imágenes</h1>
+    <div class="imagenes">
+        <img src="https://picsum.photos/250/180?random=1" alt="Imagen 1">
+        <img src="https://picsum.photos/250/180?random=2" alt="Imagen 2">
+        <img src="https://picsum.photos/250/180?random=3" alt="Imagen 3">
+        <img src="https://picsum.photos/250/180?random=4" alt="Imagen 4">
+        <img src="https://picsum.photos/250/180?random=5" alt="Imagen 5">
+        <img src="https://picsum.photos/250/180?random=6" alt="Imagen 6">
+    </div>
+
+    <div class="marca-agua">UMH</div>
+</body>
+</html>
